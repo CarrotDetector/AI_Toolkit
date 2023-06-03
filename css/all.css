@@ -78,6 +78,10 @@ a {
   margin-top: 0.5rem;
 }
 
+.h1-small {
+  display: none;
+}
+
 .container {
   width: 100%;
   max-width: 1920px;
@@ -101,12 +105,15 @@ a {
   padding: 20px 0;
   border-bottom: 1px solid white;
 }
-.menu ul {
+.menu .menu-item {
   font-size: 1rem;
   display: flex;
 }
-.menu ul li {
+.menu .menu-item li {
   margin-left: 20px;
+}
+.menu .menu-img {
+  display: none;
 }
 
 .start {
@@ -140,6 +147,9 @@ a {
 }
 .header-content .header-introduce {
   width: 66%;
+}
+.header-content .introduce-small {
+  display: none;
 }
 .header-content .service-card {
   display: flex;
@@ -404,4 +414,114 @@ a {
 }
 .footer .footer-footer .back-to .back-to-top {
   margin-right: 1rem;
+}
+
+@media (max-width: 1290px) {
+  .container {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+  }
+  .container-content {
+    width: 100%;
+    max-width: 1296px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 375px) {
+  h1 {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+  h2 {
+    font-size: 2em;
+  }
+  h3 {
+    font-size: 2rem;
+    line-height: 38.4px;
+    white-space: pre-line;
+  }
+  h4 {
+    font-size: 1.25rem;
+  }
+  html {
+    max-width: 375px;
+    width: 375px;
+  }
+  .container {
+    width: 100%;
+    max-width: 375px;
+    width: 375px;
+  }
+  .container-content {
+    width: 100%;
+    max-width: 351px;
+  }
+  .menu .menu-item {
+    display: none;
+  }
+  .menu .menu-img {
+    display: block;
+  }
+  .h1-large {
+    display: none;
+  }
+  .h1-small {
+    display: block;
+  }
+  .header .grass {
+    margin-bottom: 110px;
+  }
+  .header-content .header-service {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+  .header-content .header-introduce {
+    display: none;
+  }
+  .header-content .introduce-small {
+    width: 100%;
+    display: block;
+  }
+  .header-content .s-mb-120 {
+    margin-bottom: 120px;
+  }
+  .header-content .service-card {
+    flex-wrap: wrap;
+  }
+  .header-content .service-card .s-fz-32 {
+    font-size: 2rem;
+  }
+  .header-content .service-card .card-body {
+    width: 100%;
+    margin-top: 10px;
+  }
+  .partner .partner-h4 {
+    margin-bottom: 24px;
+  }
+  .partner .enterprise {
+    margin-bottom: 48px;
+  }
+  .comment-card {
+    flex-wrap: wrap;
+  }
+  .comment-card .card-hide {
+    display: none;
+  }
+  .comment-card .comment-card-body {
+    width: 100%;
+  }
+  .body {
+    border-radius: 1.25rem;
+  }
+  .footer .footer-footer .footer-left {
+    flex-wrap: wrap;
+    justify-content: start;
+  }
+  .footer .footer-footer .footer-left .community-link {
+    margin-left: 0;
+  }
+  .footer .footer-footer .back-to .back-to-top {
+    margin-right: 1rem;
+  }
 }/*# sourceMappingURL=all.css.map */

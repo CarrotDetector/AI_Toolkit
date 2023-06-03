@@ -24,10 +24,6 @@ body{
 }
 
 
-@media(max-width: 1290px){
-    
-}
-
 h1{
     // font-size: 120px;
     font-size: 7.5rem;
@@ -93,6 +89,11 @@ a{
     margin-top: 0.5rem;
 }
 
+// 隱藏h1
+.h1-small{
+    display: none;
+}
+
 
 .container{
     width: 100%;
@@ -117,12 +118,16 @@ a{
     align-items: center;
     padding: 20px 0;
     border-bottom: 1px solid $base-color;
-    ul{
+    .menu-item{
         font-size: 1rem;
         display: flex;  
         li{
             margin-left: 20px;
         }
+    }
+    // 隱藏img
+    .menu-img{
+        display: none;
     }
 }
 
@@ -135,6 +140,7 @@ a{
     border: 1px solid $base-color;
     color: $base-color;
 }
+
 
 .header{
     a{
@@ -161,6 +167,9 @@ a{
     }
     .header-introduce{
         width: 66%;
+    }
+    .introduce-small{
+        display: none;
     }
     .service-card{
         display: flex;
@@ -461,4 +470,364 @@ a{
             }
         }
     }
+}
+
+
+
+@media(max-width: 1290px){
+    .container{
+        width: 100%;
+        max-width: 1920px;
+        margin: 0 auto;
+    }
+    
+    // 內容大小設定
+    .container-content{
+        width: 100%;
+        max-width: 1296px;
+        margin: 0 auto;
+    }
+}
+
+@media(max-width: 375px){
+    h1{
+        font-size: 3rem;
+        line-height: 3.5rem;
+    }
+
+    h2{
+        font-size: 2em;
+    }
+    
+    h3{
+        font-size: 2rem;
+        line-height: 38.4px;
+        //保留換行，連續空白合併
+        white-space: pre-line;
+    }
+    
+    h4{
+        font-size: 1.25rem;
+    }
+
+    html{
+        max-width: 375px;
+        width: 375px;
+    }
+    .container{
+        width: 100%;
+        max-width: 375px;
+        width: 375px;
+    }
+    
+    // 內容大小設定
+    .container-content{
+        width: 100%;
+        max-width: 351px;
+        // width: 351px;
+    }
+
+    .menu{
+        .menu-item{
+            display: none;
+        }
+        .menu-img{
+            display: block;
+        }
+    }
+
+    .h1-large{
+        display: none;
+    }
+    .h1-small{
+        display: block;
+    }
+
+    .header{
+        .grass{
+            margin-bottom: 110px;
+        }
+    }
+
+
+
+    .header-content{
+        .header-service{
+            width: 100%;
+            margin-bottom: 24px;
+        }
+        .header-introduce{
+            display: none;
+        }
+        .introduce-small{
+            width: 100%;
+            display: block;
+        }
+        .s-mb-120{
+            margin-bottom: 120px;
+        }
+        .service-card{
+            flex-wrap: wrap;
+            .s-fz-32{
+                font-size: 2rem;
+            }
+            .card-body{
+                width: 100%;
+                margin-top: 10px;
+            }
+        }
+    }
+
+    .partner{
+        // width: 100%;
+        .partner-h4{
+            margin-bottom: 24px;
+        }
+        // .partner-img{
+        //     img{
+        //         height: 40px;
+        //     }
+            .enterprise{
+                // display: flex;
+                // justify-content: space-between;
+                // position: relative;
+                margin-bottom: 48px;
+            }
+        //     // 漸層
+        //     .enterprise::after,.enterprise::before{
+        //         content: "";
+        //         width: 160px;
+        //         height: 40px;
+        //         position: absolute;
+        //     }
+        //     .enterprise::after{
+        //         right: 20px;
+        //         background: linear-gradient(to left,rgb(0,0,0,1) 0%,rgb(0,0,0,0.5) 80%,rgb(0,0,0,0.1) 100%);
+        //     }
+        //     .enterprise::before{
+        //         left: 0px;
+        //         background: linear-gradient(to right,rgb(0,0,0,1)0%,rgb(0,0,0,0.5) 80%,rgb(0,0,0,0.1) 100%);
+        //     }
+        //     .enterprise-down{
+        //         margin-left: 24px;
+        //     }
+        // }
+    }
+
+
+    .comment-card{
+        // display: flex;
+        // justify-content: space-between;
+        // width: 1296px;
+        flex-wrap: wrap;
+        .card-hide{
+            display: none;
+        }
+        .comment-card-body{
+            // background: #FFFFFF14;
+            width: 100%;
+            // border-radius: 5%;
+            // padding: 5% 40px;
+            // .comment{
+            //     height: 195px;
+            //     overflow: hidden;
+            // }
+            // p{
+            //     width: 0 30%;
+            // }
+        }
+        // .commenter{
+        //     display: flex;
+        //     align-items: center;
+        //     img{
+        //         height: 48px;
+        //         width: 48px;
+        //         margin-right: 16px;
+        //     }
+        //     .commenter-name{
+        //         margin-bottom: 4px;
+        //         font-weight: 700;
+        //     }
+        //     .commenter-company{
+        //         font-weight: 400;
+        //         // font-size: 14px;
+        //         font-size: 0.875em;
+        //     }
+        // }   
+    }
+    
+
+    .body{
+        // width: 100%;
+        border-radius: 1.25rem;
+        // background: $base-color;
+        // color: black;
+        // overflow: hidden;
+    
+        // // 搜尋
+        // .search{
+        //     margin-top: 80px;
+        //     padding: 32px auto;
+        //     border: none;
+        //     color: $gray-darker;
+        //     background: $gray;
+        //     border-radius: 16px;
+        //     background-image: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2023web-camp/icons/search.png");
+        //     background-repeat: no-repeat;
+        //     background-size: 24px 24px;
+        //     height: 64px;
+        //     background-position: 43px 20px;
+        //     padding-left: 70px;
+        //     width: 100%;
+        // }
+    
+        // // 篩選
+        // .filter-bar{
+        //     margin-top: 24px;
+        //     margin-bottom: 40px;
+        //     display: flex;
+        //     justify-content: space-between;
+        //     width: 100%;
+        //     .filter-btn{
+        //         padding: 20px 32px 20px 40px;
+        //         background: $base-color;
+        //         font-size: 1rem;
+        //         font-family: $font-family;
+        //         display: flex;
+        //         align-items: center;
+        //     }
+        //     .btn{ 
+        //         border: 2px solid $gray;
+        //         border-radius: 1rem;
+        //     }
+    
+        //     .ul-tag{
+        //         display: flex;
+        //         align-items: center;
+        //         justify-content: space-between;
+        //         li{
+        //             margin-left: 40px;
+        //         }
+        //         .tag-btn{
+        //             background: $gray;
+        //             padding: 4px 8px;
+        //             color: black;
+        //         }
+        //     }
+        //     a{
+        //         color: $gray-darker;
+        //     }
+        // }
+    
+        // // AI工具王卡片
+        // .wrap{
+        //     display: flex;
+        //     // 換行
+        //     flex-wrap: wrap;
+        
+        //     .mrl-24{
+        //         margin-right: 24px;
+        //         margin-left: 24px;
+        //     }
+        
+        //     .card{
+        //         width: 416px;
+        //         margin-top: 12px;
+        //         margin-bottom: 12px;
+        //         border: 1px solid $gray;
+        //         border-radius: 16px;
+        //         // 解決圖片超出圓角
+        //         overflow: hidden;
+        
+        //         a{
+        //             color: black;
+        //         }   
+    
+        //         .card-img{
+        //             overflow: hidden;
+        //             img:hover{
+        //                 // 設定過渡時間0.5秒
+        //                 transition: transform 0.5s;
+        //                 transform: scale(1.2);     
+        //             }
+        //         }
+        
+        //         .card-header,.card-body,.card-footer{
+        //             padding: 20px 32px;
+        //         }
+                
+        //         .card-body , .card-footer{
+        //             display: flex;
+        //             justify-content: space-between;
+        //         }
+                
+        //         .card-header{
+        //             h3{
+        //                 font-size: 1.25em;
+        //                 margin-bottom: 12px;
+        //                 font-weight: 900;
+        //             }
+        //             p{
+        //                 color:#525252;
+        //                 font-size:0.875em ;
+        //                 height: 42px;
+        //                 line-height: 150%;
+        //             }
+        //         }
+                
+                
+        //         .card-body{
+        //             border-top: 1px solid $gray;
+        //             h4{
+        //                 font-weight: 700;
+        //             }
+        //             h4,span{
+        //                 font-size: 1rem;
+        //             }
+        //         }
+                
+        //         .card-footer{
+        //             border-top: 1px solid $gray;
+        //             // 垂直置中
+        //             align-items: center;
+        //         }
+        //     }
+        // }
+        // // 頁數
+        // .page{
+        //     display: flex;
+        //     justify-content: flex-end;
+        //     margin: 24px 0 162px;
+        //     a{
+        //        padding: 0.85rem 1.2rem;
+        //        color: black;
+        //     }
+        //     .now-page{
+        //         background: black;
+        //         color: $base-color;
+        //         border-radius: 1rem;
+        //     }
+        // }
+    }
+
+
+    .footer{
+        .footer-footer{
+            .footer-left{
+                flex-wrap: wrap;
+                justify-content: start;
+                .community-link{
+                    margin-left: 0;
+                }
+            }
+            .back-to{
+                .back-to-top{
+                    margin-right: 1rem;
+                }
+            }
+        }
+    }
+
+
+
 }
