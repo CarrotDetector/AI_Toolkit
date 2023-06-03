@@ -24,6 +24,60 @@ h1 {
   margin: 40px 0;
 }
 
+h2 {
+  font-size: 5em;
+}
+
+h3 {
+  font-size: 3rem;
+  line-height: 57.6px;
+  white-space: pre-line;
+}
+
+h4 {
+  font-size: 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.mb10per {
+  margin-bottom: 10%;
+}
+
+.mb-160 {
+  margin-bottom: 160px;
+}
+
+.mtb-160 {
+  margin: 10rem 0;
+}
+
+.mb-80 {
+  margin-bottom: 5rem;
+}
+
+.mt-40 {
+  margin-top: 2.5rem;
+}
+
+.p-content {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 24px;
+  margin: 40px 0;
+}
+
+.mt-10 {
+  margin-top: 10rem;
+}
+
+.mt-05 {
+  margin-top: 0.5rem;
+}
+
 .container {
   width: 100%;
   max-width: 1920px;
@@ -36,15 +90,16 @@ h1 {
   margin: 0 auto;
 }
 
+.logo {
+  height: 40px;
+}
+
 .menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 0;
   border-bottom: 1px solid white;
-}
-.menu .menu-logo {
-  height: 40px;
 }
 .menu ul {
   font-size: 1rem;
@@ -54,62 +109,25 @@ h1 {
   margin-left: 20px;
 }
 
-.header a {
-  text-decoration: none;
-  color: white;
-  font-weight: 700;
-}
-.header .start {
+.start {
   display: inline-block;
   font-size: 1.25em;
   padding: 20px 30px;
-  margin-bottom: 80px;
   border-radius: 15px;
   border: 1px solid white;
+  color: white;
+}
+
+.header a {
+  font-weight: 700;
 }
 .header .grass {
   display: flex;
   justify-content: flex-end;
   margin-bottom: 160px;
-  position: relative;
 }
-.header .grass li {
-  display: flex;
-  align-items: flex-end;
-}
-.header .grass .circle-left {
-  position: absolute;
-  right: 40px;
-  width: 100px;
-  height: 100px;
-  border-top: 20px solid white;
-  border-right: 20px solid white;
-  border-radius: 0 100% 0 0;
-}
-.header .grass .line {
-  position: absolute;
-  width: 20px;
-  height: 180px;
-  background: white;
-}
-.header .grass .circle-right {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  border-top: 20px solid white;
-  border-left: 20px solid white;
-  border-radius: 100% 0 0 0;
-}
-
-h3 {
-  font-size: 3rem;
-  line-height: 57.6px;
-  white-space: pre-line;
-  margin-bottom: 10%;
-}
-
-h4 {
-  font-size: 2rem;
+.header .grass .grass-img {
+  animation: grass-animation 8s infinite;
 }
 
 .header-content {
@@ -135,21 +153,6 @@ h4 {
 }
 .header-content .service-card .card-body img {
   margin-bottom: 5%;
-}
-
-.mb-160 {
-  margin-bottom: 160px;
-}
-
-.mtb-160 {
-  margin: 160px 0;
-}
-
-.p-content {
-  font-weight: 400;
-  font-size: 1rem;
-  line-height: 24px;
-  margin: 40px 0;
 }
 
 .partner {
@@ -202,6 +205,7 @@ h4 {
 }
 .comment-card .comment-card-body .comment {
   height: 195px;
+  overflow: hidden;
 }
 .comment-card .comment-card-body p {
   width: 0 30%;
@@ -226,40 +230,25 @@ h4 {
 
 .body {
   width: 100%;
-  border-radius: 160px;
+  border-radius: 10rem;
   background: white;
   color: black;
   overflow: hidden;
 }
-.body a {
-  text-decoration: none;
-}
-.body h2 {
-  font-size: 5em;
-  margin-top: 10rem;
-}
-.body .container-search {
+.body .search {
   margin-top: 80px;
-  width: 100%;
-  height: 64px;
-  background: #F2F2F2;
-  border-radius: 16px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-.body .container-search .search {
   padding: 32px auto;
   border: none;
   color: rgba(0, 0, 0, 0.6);
+  background: #F2F2F2;
+  border-radius: 16px;
   background-image: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2023web-camp/icons/search.png");
   background-repeat: no-repeat;
-}
-.body .container-search img {
-  width: 17.5px;
-  height: 17.5px;
-  margin-left: 43px;
-  margin-right: 15.5px;
+  background-size: 24px 24px;
+  height: 64px;
+  background-position: 43px 20px;
+  padding-left: 70px;
+  width: 100%;
 }
 .body .filter-bar {
   margin-top: 24px;
@@ -268,11 +257,17 @@ h4 {
   justify-content: space-between;
   width: 100%;
 }
-.body .filter-bar .btn {
+.body .filter-bar .filter-btn {
   padding: 20px 32px 20px 40px;
-  border: 1px solid #F2F2F2;
-  border-radius: 1rem;
   background: white;
+  font-size: 1rem;
+  font-family: "Noto Sans TC", "sans-serif";
+  display: flex;
+  align-items: center;
+}
+.body .filter-bar .btn {
+  border: 2px solid #F2F2F2;
+  border-radius: 1rem;
 }
 .body .filter-bar .ul-tag {
   display: flex;
@@ -281,6 +276,11 @@ h4 {
 }
 .body .filter-bar .ul-tag li {
   margin-left: 40px;
+}
+.body .filter-bar .ul-tag .tag-btn {
+  background: #F2F2F2;
+  padding: 4px 8px;
+  color: black;
 }
 .body .filter-bar a {
   color: rgba(0, 0, 0, 0.6);
@@ -300,6 +300,9 @@ h4 {
   border: 1px solid #F2F2F2;
   border-radius: 16px;
   overflow: hidden;
+}
+.body .wrap .card a {
+  color: black;
 }
 .body .wrap .card .card-img {
   overflow: hidden;
@@ -333,14 +336,11 @@ h4 {
   font-weight: 700;
 }
 .body .wrap .card .card-body h4, .body .wrap .card .card-body span {
-  font-size: 16px;
+  font-size: 1rem;
 }
 .body .wrap .card .card-footer {
   border-top: 1px solid #F2F2F2;
   align-items: center;
-}
-.body .wrap .card .card-footer a {
-  color: black;
 }
 .body .page {
   display: flex;
@@ -355,4 +355,53 @@ h4 {
   background: black;
   color: white;
   border-radius: 1rem;
+}
+
+.w100per {
+  width: 100%;
+  text-align: center;
+}
+
+.footer .footer-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 160px 0;
+}
+.footer .footer-header .f-start {
+  display: flex;
+}
+.footer .footer-header img {
+  margin-left: 1rem;
+}
+.footer .footer-content {
+  padding: 5rem 0;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+}
+.footer .footer-content .f-content {
+  display: flex;
+  justify-content: space-between;
+}
+.footer .footer-content .f-content a {
+  display: block;
+}
+.footer .footer-footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0;
+}
+.footer .footer-footer .footer-left {
+  display: flex;
+}
+.footer .footer-footer .footer-left .community-link {
+  margin-left: 6.25rem;
+  display: flex;
+}
+.footer .footer-footer .footer-left .community-link li {
+  margin-right: 20px;
+}
+.footer .footer-footer .back-to .back-to-top {
+  margin-right: 1rem;
 }/*# sourceMappingURL=all.css.map */
