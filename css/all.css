@@ -1,0 +1,358 @@
+@charset "UTF-8";
+/* 設定 全域 border-box*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 可以讓圖片隨著視窗大小縮放*/
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  background: black;
+  color: white;
+  font-family: "Noto Sans TC", "sans-serif";
+  font-weight: 900;
+}
+
+h1 {
+  font-size: 7.5rem;
+  line-height: 144px;
+  white-space: pre-line;
+  margin: 40px 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.container-content {
+  width: 100%;
+  max-width: 1296px;
+  margin: 0 auto;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid white;
+}
+.menu .menu-logo {
+  height: 40px;
+}
+.menu ul {
+  font-size: 1rem;
+  display: flex;
+}
+.menu ul li {
+  margin-left: 20px;
+}
+
+.header a {
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+}
+.header .start {
+  display: inline-block;
+  font-size: 1.25em;
+  padding: 20px 30px;
+  margin-bottom: 80px;
+  border-radius: 15px;
+  border: 1px solid white;
+}
+.header .grass {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 160px;
+  position: relative;
+}
+.header .grass li {
+  display: flex;
+  align-items: flex-end;
+}
+.header .grass .circle-left {
+  position: absolute;
+  right: 40px;
+  width: 100px;
+  height: 100px;
+  border-top: 20px solid white;
+  border-right: 20px solid white;
+  border-radius: 0 100% 0 0;
+}
+.header .grass .line {
+  position: absolute;
+  width: 20px;
+  height: 180px;
+  background: white;
+}
+.header .grass .circle-right {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-top: 20px solid white;
+  border-left: 20px solid white;
+  border-radius: 100% 0 0 0;
+}
+
+h3 {
+  font-size: 3rem;
+  line-height: 57.6px;
+  white-space: pre-line;
+  margin-bottom: 10%;
+}
+
+h4 {
+  font-size: 2rem;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.header-content .header-service {
+  width: 32%;
+}
+.header-content .header-introduce {
+  width: 66%;
+}
+.header-content .service-card {
+  display: flex;
+  justify-content: space-between;
+}
+.header-content .service-card .card-body {
+  padding: 5% 3% 2%;
+  width: 32%;
+  border: 3px solid rgba(255, 255, 255, 0.0784313725);
+  border-radius: 5%;
+}
+.header-content .service-card .card-body img {
+  margin-bottom: 5%;
+}
+
+.mb-160 {
+  margin-bottom: 160px;
+}
+
+.mtb-160 {
+  margin: 160px 0;
+}
+
+.p-content {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 24px;
+  margin: 40px 0;
+}
+
+.partner {
+  width: 100%;
+}
+.partner .partner-h4 {
+  width: 100%;
+  margin-bottom: 80px;
+}
+.partner .partner-img img {
+  height: 40px;
+}
+.partner .partner-img .enterprise {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 20px;
+}
+.partner .partner-img .enterprise::after, .partner .partner-img .enterprise::before {
+  content: "";
+  width: 160px;
+  height: 40px;
+  position: absolute;
+}
+.partner .partner-img .enterprise::after {
+  right: 20px;
+  background: linear-gradient(to left, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 80%, rgba(0, 0, 0, 0.1) 100%);
+}
+.partner .partner-img .enterprise::before {
+  left: 0px;
+  background: linear-gradient(to right, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 80%, rgba(0, 0, 0, 0.1) 100%);
+}
+.partner .partner-img .enterprise-down {
+  margin-left: 24px;
+}
+
+.comment-div {
+  width: 100%;
+}
+
+.comment-card {
+  display: flex;
+  justify-content: space-between;
+}
+.comment-card .comment-card-body {
+  background: rgba(255, 255, 255, 0.0784313725);
+  width: 32%;
+  border-radius: 5%;
+  padding: 5% 40px;
+}
+.comment-card .comment-card-body .comment {
+  height: 195px;
+}
+.comment-card .comment-card-body p {
+  width: 0 30%;
+}
+.comment-card .commenter {
+  display: flex;
+  align-items: center;
+}
+.comment-card .commenter img {
+  height: 48px;
+  width: 48px;
+  margin-right: 16px;
+}
+.comment-card .commenter .commenter-name {
+  margin-bottom: 4px;
+  font-weight: 700;
+}
+.comment-card .commenter .commenter-company {
+  font-weight: 400;
+  font-size: 0.875em;
+}
+
+.body {
+  width: 100%;
+  border-radius: 160px;
+  background: white;
+  color: black;
+  overflow: hidden;
+}
+.body a {
+  text-decoration: none;
+}
+.body h2 {
+  font-size: 5em;
+  margin-top: 10rem;
+}
+.body .container-search {
+  margin-top: 80px;
+  width: 100%;
+  height: 64px;
+  background: #F2F2F2;
+  border-radius: 16px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.body .container-search .search {
+  padding: 32px auto;
+  border: none;
+  color: rgba(0, 0, 0, 0.6);
+  background-image: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2023web-camp/icons/search.png");
+  background-repeat: no-repeat;
+}
+.body .container-search img {
+  width: 17.5px;
+  height: 17.5px;
+  margin-left: 43px;
+  margin-right: 15.5px;
+}
+.body .filter-bar {
+  margin-top: 24px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.body .filter-bar .btn {
+  padding: 20px 32px 20px 40px;
+  border: 1px solid #F2F2F2;
+  border-radius: 1rem;
+  background: white;
+}
+.body .filter-bar .ul-tag {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.body .filter-bar .ul-tag li {
+  margin-left: 40px;
+}
+.body .filter-bar a {
+  color: rgba(0, 0, 0, 0.6);
+}
+.body .wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+.body .wrap .mrl-24 {
+  margin-right: 24px;
+  margin-left: 24px;
+}
+.body .wrap .card {
+  width: 416px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  border: 1px solid #F2F2F2;
+  border-radius: 16px;
+  overflow: hidden;
+}
+.body .wrap .card .card-img {
+  overflow: hidden;
+}
+.body .wrap .card .card-img img:hover {
+  transition: transform 0.5s;
+  transform: scale(1.2);
+}
+.body .wrap .card .card-header, .body .wrap .card .card-body, .body .wrap .card .card-footer {
+  padding: 20px 32px;
+}
+.body .wrap .card .card-body, .body .wrap .card .card-footer {
+  display: flex;
+  justify-content: space-between;
+}
+.body .wrap .card .card-header h3 {
+  font-size: 1.25em;
+  margin-bottom: 12px;
+  font-weight: 900;
+}
+.body .wrap .card .card-header p {
+  color: #525252;
+  font-size: 0.875em;
+  height: 42px;
+  line-height: 150%;
+}
+.body .wrap .card .card-body {
+  border-top: 1px solid #F2F2F2;
+}
+.body .wrap .card .card-body h4 {
+  font-weight: 700;
+}
+.body .wrap .card .card-body h4, .body .wrap .card .card-body span {
+  font-size: 16px;
+}
+.body .wrap .card .card-footer {
+  border-top: 1px solid #F2F2F2;
+  align-items: center;
+}
+.body .wrap .card .card-footer a {
+  color: black;
+}
+.body .page {
+  display: flex;
+  justify-content: flex-end;
+  margin: 24px 0 162px;
+}
+.body .page a {
+  padding: 0.85rem 1.2rem;
+  color: black;
+}
+.body .page .now-page {
+  background: black;
+  color: white;
+  border-radius: 1rem;
+}/*# sourceMappingURL=all.css.map */

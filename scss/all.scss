@@ -1,0 +1,409 @@
+/* 設定 全域 border-box*/
+*, *::before, *::after{
+    box-sizing: border-box;
+    // outline: 1px solid blue;
+}
+
+
+/* 可以讓圖片隨著視窗大小縮放*/
+img{
+	max-width: 100%;
+	height: auto;
+}
+
+$base-color: white;
+$font-family: 'Noto Sans TC','sans-serif';
+$gray:#F2F2F2;
+$gray-darker:rgb(0,0,0,0.6);
+
+body{
+    background: black;
+    color: $base-color;
+    font-family: $font-family;
+    font-weight: 900;
+}
+
+
+@media(max-width: 1290px){
+    
+}
+
+h1{
+    // font-size: 120px;
+    font-size: 7.5rem;
+    line-height: 144px;
+    //保留換行，連續空白合併
+    white-space: pre-line;
+    margin: 40px 0;
+}
+
+.container{
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+// 內容大小設定
+.container-content{
+    width: 100%;
+    max-width: 1296px;
+    margin: 0 auto;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid $base-color;
+    .menu-logo{
+        height: 40px;
+    }
+    ul{
+        font-size: 1rem;
+        display: flex;  
+        li{
+            margin-left: 20px;
+        }
+    }
+}
+
+.header{
+    a{
+        text-decoration: none;
+        color: $base-color;
+        font-weight: 700;
+    }
+    // 開始使用按鈕
+    .start{
+        display: inline-block;
+        // max-width: ;
+        // font-size: 20px;
+        font-size: 1.25em;
+        padding: 20px 30px;
+        margin-bottom: 80px;
+        border-radius: 15px;
+        border: 1px solid $base-color;
+    }
+    .grass{
+        // 草還沒完成
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 160px;
+        position: relative;
+        li{
+            display: flex; 
+            align-items: flex-end; 
+        }
+        .circle-left{
+            position: absolute;
+            right: 40px;
+            width: 100px;
+            height: 100px;
+            border-top: 20px solid $base-color;
+            border-right: 20px solid $base-color;
+            border-radius: 0 100% 0 0;
+        }
+        .line{
+            position: absolute;
+            width: 20px;
+            height: 180px;
+            background: $base-color;
+        }
+        .circle-right{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-top: 20px solid $base-color;
+            border-left: 20px solid $base-color;
+            border-radius: 100% 0 0 0;
+        }
+    }
+}
+
+
+h3{
+    font-size: 3rem;
+    line-height: 57.6px;
+    //保留換行，連續空白合併
+    white-space: pre-line;
+    margin-bottom: 10%;
+}
+
+h4{
+    font-size: 2rem;
+}
+
+.header-content{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .header-service{
+        width: 32%;
+    }
+    .header-introduce{
+        width: 66%;
+    }
+    .service-card{
+        display: flex;
+        justify-content: space-between;
+        .card-body{
+            padding: 5% 3% 2%;
+            width: 32%;
+            border: 3px solid #FFFFFF14;
+            border-radius: 5%;
+            img{
+                margin-bottom: 5%;
+            }
+        }
+    }
+}
+
+.mb-160{
+    margin-bottom: 160px;
+}
+
+.mtb-160{
+    margin: 160px 0;
+}
+
+.p-content{
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 24px;
+    margin: 40px 0;
+}
+
+.partner{
+    width: 100%;
+    .partner-h4{
+        width: 100%;
+        margin-bottom: 80px;
+    }
+    .partner-img{
+        img{
+            height: 40px;
+        }
+        .enterprise{
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            margin-bottom: 20px;
+        }
+        // 漸層
+        .enterprise::after,.enterprise::before{
+            content: "";
+            width: 160px;
+            height: 40px;
+            position: absolute;
+        }
+        .enterprise::after{
+            right: 20px;
+            background: linear-gradient(to left,rgb(0,0,0,1) 0%,rgb(0,0,0,0.5) 80%,rgb(0,0,0,0.1) 100%);
+        }
+        .enterprise::before{
+            left: 0px;
+            background: linear-gradient(to right,rgb(0,0,0,1)0%,rgb(0,0,0,0.5) 80%,rgb(0,0,0,0.1) 100%);
+        }
+        .enterprise-down{
+            margin-left: 24px;
+        }
+    }
+}
+
+.comment-div{
+    width: 100%;
+}
+.comment-card{
+    display: flex;
+    justify-content: space-between;
+    // width: 1296px;
+    .comment-card-body{
+        background: #FFFFFF14;
+        width: 32%;
+        border-radius: 5%;
+        padding: 5% 40px;
+        .comment{
+            height: 195px;
+        }
+        p{
+            width: 0 30%;
+        }
+    }
+    .commenter{
+        display: flex;
+        align-items: center;
+        img{
+            height: 48px;
+            width: 48px;
+            margin-right: 16px;
+        }
+        .commenter-name{
+            margin-bottom: 4px;
+            font-weight: 700;
+        }
+        .commenter-company{
+            font-weight: 400;
+            // font-size: 14px;
+            font-size: 0.875em;
+        }
+    }   
+}
+
+.body{
+    width: 100%;
+    border-radius: 160px;
+    background: $base-color;
+    color: black;
+    overflow: hidden;
+    a{
+        text-decoration: none;
+    }
+
+    h2{
+        font-size: 5em;
+        margin-top: 10rem;
+    }
+
+    // 搜尋
+    .container-search{
+        margin-top: 80px;
+        width: 100%;
+        height: 64px;
+        background: $gray;
+        border-radius: 16px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        .search{
+            padding: 32px auto;
+            border: none;
+            color: $gray-darker;
+            background-image: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2023web-camp/icons/search.png");
+            background-repeat: no-repeat;
+        }
+        img{
+            width: 17.5px;
+            height: 17.5px;
+            margin-left: 43px;
+            margin-right: 15.5px;
+        }
+    }
+
+    // 篩選 跟你還沒玩完呢
+    .filter-bar{
+        margin-top: 24px;
+        margin-bottom: 40px;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        .btn{
+            padding: 20px 32px 20px 40px;
+            border: 1px solid $gray;
+            border-radius: 1rem;
+            background: $base-color;
+        }
+        .ul-tag{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            li{
+                margin-left: 40px;
+            }
+        }
+        a{
+            color: $gray-darker;
+        }
+    }
+
+    // AI工具王卡片
+    .wrap{
+        display: flex;
+        // 換行
+        flex-wrap: wrap;
+    
+        .mrl-24{
+            margin-right: 24px;
+            margin-left: 24px;
+        }
+    
+        .card{
+            width: 416px;
+            margin-top: 12px;
+            margin-bottom: 12px;
+            border: 1px solid $gray;
+            border-radius: 16px;
+            // 解決圖片超出圓角
+            overflow: hidden;
+    
+            .card-img{
+                overflow: hidden;
+                img:hover{
+                    // 設定過渡時間0.5秒
+                    transition: transform 0.5s;
+                    transform: scale(1.2);     
+                }
+            }
+    
+            .card-header,.card-body,.card-footer{
+                padding: 20px 32px;
+            }
+            
+            .card-body , .card-footer{
+                display: flex;
+                justify-content: space-between;
+            }
+            
+            .card-header{
+                h3{
+                    font-size: 1.25em;
+                    margin-bottom: 12px;
+                    font-weight: 900;
+                }
+                p{
+                    color:#525252;
+                    font-size:0.875em ;
+                    height: 42px;
+                    line-height: 150%;
+                }
+            }
+            
+            
+            .card-body{
+                border-top: 1px solid $gray;
+                h4{
+                    font-weight: 700;
+                }
+                h4,span{
+                    font-size: 16px;
+                }
+            }
+            
+            .card-footer{
+                border-top: 1px solid $gray;
+                // 垂直置中
+                align-items: center;
+                a{
+                    // font-size: 16px;
+                    // text-decoration: none;
+                    color: black;
+                }          
+            }
+        }
+    }
+    .page{
+        display: flex;
+        justify-content: flex-end;
+        margin: 24px 0 162px;
+        a{
+           padding: 0.85rem 1.2rem;
+           color: black;
+        }
+        .now-page{
+            background: black;
+            color: $base-color;
+            border-radius: 1rem;
+        }
+    }
+}
+
