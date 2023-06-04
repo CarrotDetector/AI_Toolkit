@@ -1,6 +1,8 @@
 @charset "UTF-8";
 /* 設定 全域 border-box*/
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -125,6 +127,20 @@ a {
   color: white;
 }
 
+@keyframes slide-up {
+  0% {
+    transform: translateY(100%);
+  }
+  50% {
+    transform: translateY(0%);
+  }
+  60% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
 .header a {
   font-weight: 700;
 }
@@ -133,8 +149,22 @@ a {
   justify-content: flex-end;
   margin-bottom: 160px;
 }
+.header .grass .grass-li {
+  position: relative;
+  overflow: hidden;
+  height: 180px;
+}
 .header .grass .grass-img {
-  animation: grass-animation 8s infinite;
+  animation: slide-up 3s infinite;
+}
+.header .grass .delay-02 {
+  animation-delay: 0.2s;
+}
+.header .grass .delay-04 {
+  animation-delay: 0.4s;
+}
+.header .grass .delay-06 {
+  animation-delay: 0.6s;
 }
 
 .header-content {
@@ -172,31 +202,46 @@ a {
   width: 100%;
   margin-bottom: 80px;
 }
-.partner .partner-img img {
+.partner .partner-img-small {
+  display: none;
+}
+.partner .partner-img img,
+.partner .partner-img-small img {
   height: 40px;
 }
-.partner .partner-img .enterprise {
+.partner .partner-img .enterprise,
+.partner .partner-img-small .enterprise {
   display: flex;
   justify-content: space-between;
   position: relative;
   margin-bottom: 20px;
 }
-.partner .partner-img .enterprise::after, .partner .partner-img .enterprise::before {
+.partner .partner-img .enterprise::after,
+.partner .partner-img .enterprise::before,
+.partner .partner-img-small .enterprise::after,
+.partner .partner-img-small .enterprise::before {
   content: "";
   width: 160px;
   height: 40px;
   position: absolute;
 }
-.partner .partner-img .enterprise::after {
+.partner .partner-img .enterprise::after,
+.partner .partner-img-small .enterprise::after {
   right: 20px;
   background: linear-gradient(to left, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 80%, rgba(0, 0, 0, 0.1) 100%);
 }
-.partner .partner-img .enterprise::before {
+.partner .partner-img .enterprise::before,
+.partner .partner-img-small .enterprise::before {
   left: 0px;
   background: linear-gradient(to right, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 80%, rgba(0, 0, 0, 0.1) 100%);
 }
-.partner .partner-img .enterprise-down {
+.partner .partner-img .enterprise-down,
+.partner .partner-img-small .enterprise-down {
   margin-left: 24px;
+}
+
+.comment-samll-page {
+  display: none;
 }
 
 .comment-div {
@@ -206,6 +251,7 @@ a {
 .comment-card {
   display: flex;
   justify-content: space-between;
+  margin: 3rem 0 1.5rem;
 }
 .comment-card .comment-card-body {
   background: rgba(255, 255, 255, 0.0784313725);
@@ -244,6 +290,7 @@ a {
   background: white;
   color: black;
   overflow: hidden;
+  margin-top: 160px;
 }
 .body .search {
   margin-top: 80px;
@@ -321,10 +368,13 @@ a {
   transition: transform 0.5s;
   transform: scale(1.2);
 }
-.body .wrap .card .card-header, .body .wrap .card .card-body, .body .wrap .card .card-footer {
+.body .wrap .card .card-header,
+.body .wrap .card .card-body,
+.body .wrap .card .card-footer {
   padding: 20px 32px;
 }
-.body .wrap .card .card-body, .body .wrap .card .card-footer {
+.body .wrap .card .card-body,
+.body .wrap .card .card-footer {
   display: flex;
   justify-content: space-between;
 }
@@ -345,7 +395,8 @@ a {
 .body .wrap .card .card-body h4 {
   font-weight: 700;
 }
-.body .wrap .card .card-body h4, .body .wrap .card .card-body span {
+.body .wrap .card .card-body h4,
+.body .wrap .card .card-body span {
   font-size: 1rem;
 }
 .body .wrap .card .card-footer {
@@ -457,6 +508,10 @@ a {
     width: 100%;
     max-width: 351px;
   }
+  .h2-content {
+    margin: 5rem 2.5rem 0;
+    text-align: center;
+  }
   .menu .menu-item {
     display: none;
   }
@@ -499,8 +554,42 @@ a {
   .partner .partner-h4 {
     margin-bottom: 24px;
   }
-  .partner .enterprise {
-    margin-bottom: 48px;
+  .partner .partner-img-small {
+    display: block;
+  }
+  .partner .partner-img-small .enterprise::after,
+  .partner .partner-img-small .enterprise::before {
+    content: "";
+    width: 60px;
+    height: 40px;
+    position: absolute;
+  }
+  .partner .partner-img-small .enterprise::after {
+    right: 15px;
+  }
+  .partner .partner-img {
+    display: none;
+  }
+  .comment-samll-page {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 122px;
+  }
+  .comment-samll-page .circle {
+    width: 0.5rem;
+    height: 0.5rem;
+    border: 1px solid rgb(64, 64, 64);
+    background-color: rgb(64, 64, 64);
+    border-radius: 50%;
+    margin-left: 0.5rem;
+  }
+  .comment-samll-page .page-on {
+    width: 0.75rem;
+    height: 0.75rem;
+    border: 1px solid white;
+    background: white;
   }
   .comment-card {
     flex-wrap: wrap;
@@ -512,7 +601,59 @@ a {
     width: 100%;
   }
   .body {
+    margin-top: 0;
     border-radius: 1.25rem;
+  }
+  .body .search {
+    margin-top: 2rem;
+  }
+  .body .filter-bar {
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+  .body .filter-bar .filter-btn {
+    order: 1;
+  }
+  .body .filter-bar .ul-tag {
+    height: 2.5rem;
+    flex-shrink: 0;
+    order: 3;
+    overflow: hidden;
+    margin-top: 1rem;
+  }
+  .body .filter-bar .ul-tag li {
+    margin: 0 40px 0 0;
+  }
+  .body .filter-bar .ul-tag .tag-btn {
+    padding: 4px 8px;
+  }
+  .body .filter-bar .sort {
+    order: 2;
+  }
+  .body .wrap .mrl-24 {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .body .page {
+    margin: 1.5rem 0 5rem;
+  }
+  .w100per {
+    margin: 0 3.8rem;
+  }
+  .footer .footer-content .f-content {
+    flex-wrap: wrap;
+  }
+  .footer .footer-content .f-content .f-logo {
+    order: 1;
+    width: 100%;
+    margin-bottom: 2.5rem;
+  }
+  .footer .footer-content .f-content .go-page {
+    order: 2;
+  }
+  .footer .footer-content .f-content .go-page h2 {
+    font-size: 3rem;
   }
   .footer .footer-footer .footer-left {
     flex-wrap: wrap;
@@ -520,8 +661,15 @@ a {
   }
   .footer .footer-footer .footer-left .community-link {
     margin-left: 0;
+    margin-top: 2.25rem;
+  }
+  .footer .footer-footer .footer-left .community-link .m-no {
+    margin: 0;
+  }
+  .footer .footer-footer .back-to {
+    width: 45%;
   }
   .footer .footer-footer .back-to .back-to-top {
-    margin-right: 1rem;
+    margin-right: 0;
   }
 }/*# sourceMappingURL=all.css.map */

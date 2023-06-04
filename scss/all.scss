@@ -1,22 +1,24 @@
 /* 設定 全域 border-box*/
-*, *::before, *::after{
+*,
+*::before,
+*::after {
     box-sizing: border-box;
     // outline: 1px solid blue;
 }
 
 
 /* 可以讓圖片隨著視窗大小縮放*/
-img{
-	max-width: 100%;
-	height: auto;
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 $base-color: white;
-$font-family: 'Noto Sans TC','sans-serif';
-$gray:#F2F2F2;
-$gray-darker:rgb(0,0,0,0.6);
+$font-family: 'Noto Sans TC', 'sans-serif';
+$gray: #F2F2F2;
+$gray-darker: rgb(0, 0, 0, 0.6);
 
-body{
+body {
     background: black;
     color: $base-color;
     font-family: $font-family;
@@ -24,7 +26,7 @@ body{
 }
 
 
-h1{
+h1 {
     // font-size: 120px;
     font-size: 7.5rem;
     line-height: 144px;
@@ -33,106 +35,109 @@ h1{
     margin: 40px 0;
 }
 
-h2{
+h2 {
     font-size: 5em;
 }
 
-h3{
+h3 {
     font-size: 3rem;
     line-height: 57.6px;
     //保留換行，連續空白合併
     white-space: pre-line;
 }
 
-h4{
+h4 {
     font-size: 2rem;
 }
 
-a{
+a {
     text-decoration: none;
     color: $base-color;
 }
 
-.mb10per{
+.mb10per {
     margin-bottom: 10%;
 }
 
-.mb-160{
+.mb-160 {
     margin-bottom: 160px;
 }
 
-.mtb-160{
+.mtb-160 {
     margin: 10rem 0;
 }
 
-.mb-80{
+.mb-80 {
     margin-bottom: 5rem;
 }
 
-.mt-40{
+.mt-40 {
     margin-top: 2.5rem;
 }
 
 
-.p-content{
+.p-content {
     font-weight: 400;
     font-size: 1rem;
     line-height: 24px;
     margin: 40px 0;
 }
 
-.mt-10{
+.mt-10 {
     margin-top: 10rem;
 }
 
-.mt-05{
+.mt-05 {
     margin-top: 0.5rem;
 }
 
 // 隱藏h1
-.h1-small{
+.h1-small {
     display: none;
 }
 
 
-.container{
+.container {
     width: 100%;
     max-width: 1920px;
     margin: 0 auto;
 }
 
 // 內容大小設定
-.container-content{
+.container-content {
     width: 100%;
     max-width: 1296px;
     margin: 0 auto;
 }
 
-.logo{
+.logo {
     height: 40px;
 }
 
-.menu{
+.menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 0;
     border-bottom: 1px solid $base-color;
-    .menu-item{
+
+    .menu-item {
         font-size: 1rem;
-        display: flex;  
-        li{
+        display: flex;
+
+        li {
             margin-left: 20px;
         }
     }
+
     // 隱藏img
-    .menu-img{
+    .menu-img {
         display: none;
     }
 }
 
 // 開始使用按鈕
-.start{
+.start {
     display: inline-block;
     font-size: 1.25em;
     padding: 20px 30px;
@@ -141,138 +146,212 @@ a{
     color: $base-color;
 }
 
+// 草動畫
+@keyframes slide-up {
+    0% {
+        transform: translateY(100%);
+    }
 
-.header{
-    a{
+    50% {
+        transform: translateY(0%);
+    }
+
+    60% {
+        transform: translateY(0%);
+    }
+
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+.header {
+    a {
         font-weight: 700;
     }
 
-    .grass{
+    .grass {
         display: flex;
         justify-content: flex-end;
         margin-bottom: 160px;
-        .grass-img{
-            animation: grass-animation 8s infinite;
+
+        .grass-li {
+            position: relative;
+            overflow: hidden;
+            height: 180px;
         }
+
+        .grass-img {
+            animation: slide-up 3s infinite;
+        }
+
+        .delay-02 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-04 {
+            animation-delay: 0.4s;
+        }
+
+        .delay-06 {
+            animation-delay: 0.6s;
+        }
+
     }
 }
 
 
-.header-content{
+
+
+.header-content {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    .header-service{
+
+    .header-service {
         width: 32%;
     }
-    .header-introduce{
+
+    .header-introduce {
         width: 66%;
     }
-    .introduce-small{
+
+    .introduce-small {
         display: none;
     }
-    .service-card{
+
+    .service-card {
         display: flex;
         justify-content: space-between;
-        .card-body{
+
+        .card-body {
             padding: 5% 3% 2%;
             width: 32%;
             border: 3px solid #FFFFFF14;
             border-radius: 5%;
-            img{
+
+            img {
                 margin-bottom: 5%;
             }
         }
     }
 }
 
-.partner{
+.partner {
     width: 100%;
-    .partner-h4{
+
+    .partner-h4 {
         width: 100%;
         margin-bottom: 80px;
     }
-    .partner-img{
-        img{
+
+    .partner-img-small {
+        display: none;
+    }
+
+    .partner-img,
+    .partner-img-small {
+        img {
             height: 40px;
         }
-        .enterprise{
+
+        .enterprise {
             display: flex;
             justify-content: space-between;
             position: relative;
             margin-bottom: 20px;
         }
+
         // 漸層
-        .enterprise::after,.enterprise::before{
+        .enterprise::after,
+        .enterprise::before {
             content: "";
             width: 160px;
             height: 40px;
             position: absolute;
         }
-        .enterprise::after{
+
+        .enterprise::after {
             right: 20px;
-            background: linear-gradient(to left,rgb(0,0,0,1) 0%,rgb(0,0,0,0.5) 80%,rgb(0,0,0,0.1) 100%);
+            background: linear-gradient(to left, rgb(0, 0, 0, 1) 0%, rgb(0, 0, 0, 0.5) 80%, rgb(0, 0, 0, 0.1) 100%);
         }
-        .enterprise::before{
+
+        .enterprise::before {
             left: 0px;
-            background: linear-gradient(to right,rgb(0,0,0,1)0%,rgb(0,0,0,0.5) 80%,rgb(0,0,0,0.1) 100%);
+            background: linear-gradient(to right, rgb(0, 0, 0, 1)0%, rgb(0, 0, 0, 0.5) 80%, rgb(0, 0, 0, 0.1) 100%);
         }
-        .enterprise-down{
+
+        .enterprise-down {
             margin-left: 24px;
         }
     }
 }
 
-.comment-div{
+
+.comment-samll-page {
+    display: none;
+}
+
+.comment-div {
     width: 100%;
 }
-.comment-card{
+
+.comment-card {
     display: flex;
     justify-content: space-between;
     // width: 1296px;
-    .comment-card-body{
+    margin: 3rem 0 1.5rem;
+
+    .comment-card-body {
         background: #FFFFFF14;
         width: 32%;
         border-radius: 5%;
         padding: 5% 40px;
-        .comment{
+
+        .comment {
             height: 195px;
             overflow: hidden;
         }
-        p{
+
+        p {
             width: 0 30%;
         }
     }
-    .commenter{
+
+    .commenter {
         display: flex;
         align-items: center;
-        img{
+
+        img {
             height: 48px;
             width: 48px;
             margin-right: 16px;
         }
-        .commenter-name{
+
+        .commenter-name {
             margin-bottom: 4px;
             font-weight: 700;
         }
-        .commenter-company{
+
+        .commenter-company {
             font-weight: 400;
             // font-size: 14px;
             font-size: 0.875em;
         }
-    }   
+    }
 }
 
 
-.body{
+.body {
     width: 100%;
     border-radius: 10rem;
     background: $base-color;
     color: black;
     overflow: hidden;
+    margin-top: 160px;
 
     // 搜尋
-    .search{
+    .search {
         margin-top: 80px;
         padding: 32px auto;
         border: none;
@@ -289,13 +368,14 @@ a{
     }
 
     // 篩選
-    .filter-bar{
+    .filter-bar {
         margin-top: 24px;
         margin-bottom: 40px;
         display: flex;
         justify-content: space-between;
         width: 100%;
-        .filter-btn{
+
+        .filter-btn {
             padding: 20px 32px 20px 40px;
             background: $base-color;
             font-size: 1rem;
@@ -303,41 +383,45 @@ a{
             display: flex;
             align-items: center;
         }
-        .btn{ 
+
+        .btn {
             border: 2px solid $gray;
             border-radius: 1rem;
         }
 
-        .ul-tag{
+        .ul-tag {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            li{
+
+            li {
                 margin-left: 40px;
             }
-            .tag-btn{
+
+            .tag-btn {
                 background: $gray;
                 padding: 4px 8px;
                 color: black;
             }
         }
-        a{
+
+        a {
             color: $gray-darker;
         }
     }
 
     // AI工具王卡片
-    .wrap{
+    .wrap {
         display: flex;
         // 換行
         flex-wrap: wrap;
-    
-        .mrl-24{
+
+        .mrl-24 {
             margin-right: 24px;
             margin-left: 24px;
         }
-    
-        .card{
+
+        .card {
             width: 416px;
             margin-top: 12px;
             margin-bottom: 12px;
@@ -345,71 +429,82 @@ a{
             border-radius: 16px;
             // 解決圖片超出圓角
             overflow: hidden;
-    
-            a{
-                color: black;
-            }   
 
-            .card-img{
+            a {
+                color: black;
+            }
+
+            .card-img {
                 overflow: hidden;
-                img:hover{
+
+                img:hover {
                     // 設定過渡時間0.5秒
                     transition: transform 0.5s;
-                    transform: scale(1.2);     
+                    transform: scale(1.2);
                 }
             }
-    
-            .card-header,.card-body,.card-footer{
+
+            .card-header,
+            .card-body,
+            .card-footer {
                 padding: 20px 32px;
             }
-            
-            .card-body , .card-footer{
+
+            .card-body,
+            .card-footer {
                 display: flex;
                 justify-content: space-between;
             }
-            
-            .card-header{
-                h3{
+
+            .card-header {
+                h3 {
                     font-size: 1.25em;
                     margin-bottom: 12px;
                     font-weight: 900;
                 }
-                p{
-                    color:#525252;
-                    font-size:0.875em ;
+
+                p {
+                    color: #525252;
+                    font-size: 0.875em;
                     height: 42px;
                     line-height: 150%;
                 }
             }
-            
-            
-            .card-body{
+
+
+            .card-body {
                 border-top: 1px solid $gray;
-                h4{
+
+                h4 {
                     font-weight: 700;
                 }
-                h4,span{
+
+                h4,
+                span {
                     font-size: 1rem;
                 }
             }
-            
-            .card-footer{
+
+            .card-footer {
                 border-top: 1px solid $gray;
                 // 垂直置中
                 align-items: center;
             }
         }
     }
+
     // 頁數
-    .page{
+    .page {
         display: flex;
         justify-content: flex-end;
         margin: 24px 0 162px;
-        a{
-           padding: 0.85rem 1.2rem;
-           color: black;
+
+        a {
+            padding: 0.85rem 1.2rem;
+            color: black;
         }
-        .now-page{
+
+        .now-page {
             background: black;
             color: $base-color;
             border-radius: 1rem;
@@ -417,55 +512,63 @@ a{
     }
 }
 
-.w100per{
+.w100per {
     width: 100%;
     text-align: center;
 }
 
-.footer{
-    .footer-header{
+.footer {
+    .footer-header {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
         margin: 160px 0;
-        .f-start{
+
+        .f-start {
             display: flex;
         }
-        img{
+
+        img {
             margin-left: 1rem;
         }
     }
-    
-    .footer-content{
+
+    .footer-content {
         padding: 5rem 0;
         border-top: 2px solid $base-color;
         border-bottom: 2px solid $base-color;
-        .f-content{
+
+        .f-content {
             display: flex;
             justify-content: space-between;
-            a{
+
+            a {
                 display: block;
             }
         }
     }
 
-    .footer-footer{
+    .footer-footer {
         display: flex;
         justify-content: space-between;
         margin: 2rem 0;
-        .footer-left{
+
+        .footer-left {
             display: flex;
-            .community-link{
+
+            .community-link {
                 margin-left: 6.25rem;
                 display: flex;
-                li{
+
+                li {
                     margin-right: 20px;
                 }
             }
         }
-        .back-to{
-            .back-to-top{
+
+        .back-to {
+            .back-to-top {
                 margin-right: 1rem;
             }
         }
@@ -474,360 +577,291 @@ a{
 
 
 
-@media(max-width: 1290px){
-    .container{
+@media(max-width: 1290px) {
+    .container {
         width: 100%;
         max-width: 1920px;
         margin: 0 auto;
     }
-    
+
     // 內容大小設定
-    .container-content{
+    .container-content {
         width: 100%;
         max-width: 1296px;
         margin: 0 auto;
     }
 }
 
-@media(max-width: 375px){
-    h1{
+@media(max-width: 375px) {
+    h1 {
         font-size: 3rem;
         line-height: 3.5rem;
     }
 
-    h2{
+    h2 {
         font-size: 2em;
     }
-    
-    h3{
+
+    h3 {
         font-size: 2rem;
         line-height: 38.4px;
         //保留換行，連續空白合併
         white-space: pre-line;
     }
-    
-    h4{
+
+    h4 {
         font-size: 1.25rem;
     }
 
-    html{
+    html {
         max-width: 375px;
         width: 375px;
-    }
-    .container{
-        width: 100%;
-        max-width: 375px;
-        width: 375px;
-    }
-    
-    // 內容大小設定
-    .container-content{
-        width: 100%;
-        max-width: 351px;
-        // width: 351px;
     }
 
-    .menu{
-        .menu-item{
+    .container {
+        width: 100%;
+        max-width: 375px;
+        width: 375px;
+    }
+
+    // 內容大小設定
+    .container-content {
+        width: 100%;
+        max-width: 351px;
+    }
+
+    .h2-content {
+        margin: 5rem 2.5rem 0;
+        text-align: center;
+    }
+
+    .menu {
+        .menu-item {
             display: none;
         }
-        .menu-img{
+
+        .menu-img {
             display: block;
         }
     }
 
-    .h1-large{
+    .h1-large {
         display: none;
     }
-    .h1-small{
+
+    .h1-small {
         display: block;
     }
 
-    .header{
-        .grass{
+    .header {
+        .grass {
             margin-bottom: 110px;
         }
     }
 
 
 
-    .header-content{
-        .header-service{
+    .header-content {
+        .header-service {
             width: 100%;
             margin-bottom: 24px;
         }
-        .header-introduce{
+
+        .header-introduce {
             display: none;
         }
-        .introduce-small{
+
+        .introduce-small {
             width: 100%;
             display: block;
         }
-        .s-mb-120{
+
+        .s-mb-120 {
             margin-bottom: 120px;
         }
-        .service-card{
+
+        .service-card {
             flex-wrap: wrap;
-            .s-fz-32{
+
+            .s-fz-32 {
                 font-size: 2rem;
             }
-            .card-body{
+
+            .card-body {
                 width: 100%;
                 margin-top: 10px;
             }
         }
     }
 
-    .partner{
-        // width: 100%;
-        .partner-h4{
+    .partner {
+        .partner-h4 {
             margin-bottom: 24px;
         }
-        // .partner-img{
-        //     img{
-        //         height: 40px;
-        //     }
-            .enterprise{
-                // display: flex;
-                // justify-content: space-between;
-                // position: relative;
-                margin-bottom: 48px;
+
+        .partner-img-small {
+            display: block;
+
+            .enterprise::after,
+            .enterprise::before {
+                content: "";
+                width: 60px;
+                height: 40px;
+                position: absolute;
             }
-        //     // 漸層
-        //     .enterprise::after,.enterprise::before{
-        //         content: "";
-        //         width: 160px;
-        //         height: 40px;
-        //         position: absolute;
-        //     }
-        //     .enterprise::after{
-        //         right: 20px;
-        //         background: linear-gradient(to left,rgb(0,0,0,1) 0%,rgb(0,0,0,0.5) 80%,rgb(0,0,0,0.1) 100%);
-        //     }
-        //     .enterprise::before{
-        //         left: 0px;
-        //         background: linear-gradient(to right,rgb(0,0,0,1)0%,rgb(0,0,0,0.5) 80%,rgb(0,0,0,0.1) 100%);
-        //     }
-        //     .enterprise-down{
-        //         margin-left: 24px;
-        //     }
-        // }
-    }
 
+            .enterprise::after {
+                right: 15px;
+            }
+        }
 
-    .comment-card{
-        // display: flex;
-        // justify-content: space-between;
-        // width: 1296px;
-        flex-wrap: wrap;
-        .card-hide{
+        .partner-img {
             display: none;
         }
-        .comment-card-body{
-            // background: #FFFFFF14;
-            width: 100%;
-            // border-radius: 5%;
-            // padding: 5% 40px;
-            // .comment{
-            //     height: 195px;
-            //     overflow: hidden;
-            // }
-            // p{
-            //     width: 0 30%;
-            // }
+    }
+
+    .comment-samll-page {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 122px;
+
+        .circle {
+            width: 0.5rem;
+            height: 0.5rem;
+            border: 1px solid rgb(64, 64, 64);
+            background-color: rgb(64, 64, 64);
+            border-radius: 50%;
+            margin-left: 0.5rem;
         }
-        // .commenter{
-        //     display: flex;
-        //     align-items: center;
-        //     img{
-        //         height: 48px;
-        //         width: 48px;
-        //         margin-right: 16px;
-        //     }
-        //     .commenter-name{
-        //         margin-bottom: 4px;
-        //         font-weight: 700;
-        //     }
-        //     .commenter-company{
-        //         font-weight: 400;
-        //         // font-size: 14px;
-        //         font-size: 0.875em;
-        //     }
-        // }   
-    }
-    
 
-    .body{
-        // width: 100%;
+        .page-on {
+            width: 0.75rem;
+            height: 0.75rem;
+            border: 1px solid $base-color;
+            background: $base-color;
+        }
+    }
+
+    .comment-card {
+        flex-wrap: wrap;
+
+        .card-hide {
+            display: none;
+        }
+
+        .comment-card-body {
+            width: 100%;
+        }
+    }
+
+
+    .body {
+        margin-top: 0;
         border-radius: 1.25rem;
-        // background: $base-color;
-        // color: black;
-        // overflow: hidden;
-    
+
         // // 搜尋
-        // .search{
-        //     margin-top: 80px;
-        //     padding: 32px auto;
-        //     border: none;
-        //     color: $gray-darker;
-        //     background: $gray;
-        //     border-radius: 16px;
-        //     background-image: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2023web-camp/icons/search.png");
-        //     background-repeat: no-repeat;
-        //     background-size: 24px 24px;
-        //     height: 64px;
-        //     background-position: 43px 20px;
-        //     padding-left: 70px;
-        //     width: 100%;
-        // }
-    
-        // // 篩選
-        // .filter-bar{
-        //     margin-top: 24px;
-        //     margin-bottom: 40px;
-        //     display: flex;
-        //     justify-content: space-between;
-        //     width: 100%;
-        //     .filter-btn{
-        //         padding: 20px 32px 20px 40px;
-        //         background: $base-color;
-        //         font-size: 1rem;
-        //         font-family: $font-family;
-        //         display: flex;
-        //         align-items: center;
-        //     }
-        //     .btn{ 
-        //         border: 2px solid $gray;
-        //         border-radius: 1rem;
-        //     }
-    
-        //     .ul-tag{
-        //         display: flex;
-        //         align-items: center;
-        //         justify-content: space-between;
-        //         li{
-        //             margin-left: 40px;
-        //         }
-        //         .tag-btn{
-        //             background: $gray;
-        //             padding: 4px 8px;
-        //             color: black;
-        //         }
-        //     }
-        //     a{
-        //         color: $gray-darker;
-        //     }
-        // }
-    
+        .search {
+            margin-top: 2rem;
+        }
+
+        // 篩選
+        .filter-bar {
+            flex-wrap: wrap;
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+            .filter-btn {
+                order: 1;
+            }
+
+            .ul-tag {
+                height: 2.5rem;
+                // 不縮放
+                flex-shrink: 0;
+                order: 3;
+                // 超出隱藏
+                overflow: hidden;
+                margin-top: 1rem;
+
+                li {
+                    margin: 0 40px 0 0;
+                }
+
+                .tag-btn {
+                    padding: 4px 8px;
+                }
+            }
+
+            .sort {
+                order: 2;
+            }
+        }
+
         // // AI工具王卡片
-        // .wrap{
-        //     display: flex;
-        //     // 換行
-        //     flex-wrap: wrap;
-        
-        //     .mrl-24{
-        //         margin-right: 24px;
-        //         margin-left: 24px;
-        //     }
-        
-        //     .card{
-        //         width: 416px;
-        //         margin-top: 12px;
-        //         margin-bottom: 12px;
-        //         border: 1px solid $gray;
-        //         border-radius: 16px;
-        //         // 解決圖片超出圓角
-        //         overflow: hidden;
-        
-        //         a{
-        //             color: black;
-        //         }   
-    
-        //         .card-img{
-        //             overflow: hidden;
-        //             img:hover{
-        //                 // 設定過渡時間0.5秒
-        //                 transition: transform 0.5s;
-        //                 transform: scale(1.2);     
-        //             }
-        //         }
-        
-        //         .card-header,.card-body,.card-footer{
-        //             padding: 20px 32px;
-        //         }
-                
-        //         .card-body , .card-footer{
-        //             display: flex;
-        //             justify-content: space-between;
-        //         }
-                
-        //         .card-header{
-        //             h3{
-        //                 font-size: 1.25em;
-        //                 margin-bottom: 12px;
-        //                 font-weight: 900;
-        //             }
-        //             p{
-        //                 color:#525252;
-        //                 font-size:0.875em ;
-        //                 height: 42px;
-        //                 line-height: 150%;
-        //             }
-        //         }
-                
-                
-        //         .card-body{
-        //             border-top: 1px solid $gray;
-        //             h4{
-        //                 font-weight: 700;
-        //             }
-        //             h4,span{
-        //                 font-size: 1rem;
-        //             }
-        //         }
-                
-        //         .card-footer{
-        //             border-top: 1px solid $gray;
-        //             // 垂直置中
-        //             align-items: center;
-        //         }
-        //     }
-        // }
-        // // 頁數
-        // .page{
-        //     display: flex;
-        //     justify-content: flex-end;
-        //     margin: 24px 0 162px;
-        //     a{
-        //        padding: 0.85rem 1.2rem;
-        //        color: black;
-        //     }
-        //     .now-page{
-        //         background: black;
-        //         color: $base-color;
-        //         border-radius: 1rem;
-        //     }
-        // }
+        .wrap {
+            .mrl-24 {
+                // 取消mrl-24 設定
+                margin-right: 0;
+                margin-left: 0;
+            }
+        }
+
+        // 頁數
+        .page {
+            margin: 1.5rem 0 5rem;
+
+        }
+    }
+
+    .w100per {
+        margin: 0 3.8rem;
     }
 
 
-    .footer{
-        .footer-footer{
-            .footer-left{
+    .footer {
+        .footer-content {
+            .f-content {
+                flex-wrap: wrap;
+
+                .f-logo {
+                    order: 1;
+                    width: 100%;
+                    margin-bottom: 2.5rem;
+                }
+
+                .go-page {
+                    order: 2;
+
+                    h2 {
+                        font-size: 3rem;
+                    }
+                }
+            }
+        }
+
+        .footer-footer {
+            .footer-left {
                 flex-wrap: wrap;
                 justify-content: start;
-                .community-link{
+
+                .community-link {
                     margin-left: 0;
+                    margin-top: 2.25rem;
+
+                    .m-no {
+                        margin: 0;
+                    }
                 }
             }
-            .back-to{
-                .back-to-top{
-                    margin-right: 1rem;
+
+            .back-to {
+                width: 45%;
+
+                .back-to-top {
+                    margin-right: 0;
                 }
             }
         }
     }
-
-
-
 }
