@@ -415,6 +415,8 @@ a {
         display: flex;
         // 換行
         flex-wrap: wrap;
+        // 解決縮成兩排時分散距離
+        justify-content: space-around;
 
         .mrl-24 {
             margin-right: 24px;
@@ -580,7 +582,7 @@ a {
 @media(max-width: 1290px) {
     .container {
         width: 100%;
-        max-width: 1920px;
+        // max-width: 1920px;
         margin: 0 auto;
     }
 
@@ -592,7 +594,21 @@ a {
     }
 }
 
-@media(max-width: 375px) {
+@media(max-width: 1300px) {
+    .body {
+        // // AI工具王卡片
+        .wrap {
+            .mrl-24 {
+                // 取消mrl-24 設定
+                margin-right: 0;
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+
+@media(max-width: 992px) {
     h1 {
         font-size: 3rem;
         line-height: 3.5rem;
@@ -613,15 +629,15 @@ a {
         font-size: 1.25rem;
     }
 
-    html {
-        max-width: 375px;
-        width: 375px;
-    }
+    // html {
+    //     // max-width: 375px;
+    //     // width: 375px;
+    // }
 
     .container {
         width: 100%;
-        max-width: 375px;
-        width: 375px;
+        // max-width: 375px;
+        // width: 375px;
     }
 
     // 內容大小設定
@@ -798,14 +814,14 @@ a {
             }
         }
 
-        // // AI工具王卡片
-        .wrap {
-            .mrl-24 {
-                // 取消mrl-24 設定
-                margin-right: 0;
-                margin-left: 0;
-            }
-        }
+        // // // AI工具王卡片
+        // .wrap {
+        //     .mrl-24 {
+        //         // 取消mrl-24 設定
+        //         margin-right: 0;
+        //         margin-left: 0;
+        //     }
+        // }
 
         // 頁數
         .page {
@@ -865,3 +881,4 @@ a {
         }
     }
 }
+

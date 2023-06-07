@@ -345,6 +345,7 @@ a {
 .body .wrap {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 .body .wrap .mrl-24 {
   margin-right: 24px;
@@ -470,7 +471,6 @@ a {
 @media (max-width: 1290px) {
   .container {
     width: 100%;
-    max-width: 1920px;
     margin: 0 auto;
   }
   .container-content {
@@ -479,7 +479,13 @@ a {
     margin: 0 auto;
   }
 }
-@media (max-width: 375px) {
+@media (max-width: 1300px) {
+  .body .wrap .mrl-24 {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+@media (max-width: 992px) {
   h1 {
     font-size: 3rem;
     line-height: 3.5rem;
@@ -495,14 +501,8 @@ a {
   h4 {
     font-size: 1.25rem;
   }
-  html {
-    max-width: 375px;
-    width: 375px;
-  }
   .container {
     width: 100%;
-    max-width: 375px;
-    width: 375px;
   }
   .container-content {
     width: 100%;
@@ -630,10 +630,6 @@ a {
   }
   .body .filter-bar .sort {
     order: 2;
-  }
-  .body .wrap .mrl-24 {
-    margin-right: 0;
-    margin-left: 0;
   }
   .body .page {
     margin: 1.5rem 0 5rem;
