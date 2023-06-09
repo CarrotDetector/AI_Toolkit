@@ -1,0 +1,548 @@
+.l-fz-2{
+    font-size: $fz-2;
+}
+
+.mb10per {
+    margin-bottom: 10%;
+}
+
+.mb-160 {
+    margin-bottom: 160px;
+}
+
+.mtb-160 {
+    margin: 10rem 0;
+}
+
+.mb-80 {
+    margin-bottom: 5rem;
+}
+
+.mt-40 {
+    margin-top: 2.5rem;
+}
+
+
+.p-content {
+    font-weight: 400;
+    // font-size: 1rem;
+    line-height: 1.5rem;
+    margin: 40px 0;
+}
+
+.mt-10 {
+    margin-top: 10rem;
+}
+
+.mt-05 {
+    margin-top: 0.5rem;
+}
+
+// // 隱藏h1
+// .h1-small {
+//     display: none;
+// }
+
+
+.container {
+    // width: 100%;
+    // max-width: 1920px;
+    // margin: 0 auto;
+    padding: 0 12px;
+}
+
+// 內容大小設定
+.container-content {
+    // width: 100%;
+    max-width: 1296px;
+    margin: 0 auto;
+}
+
+.logo {
+    height: 40px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid $base-color;
+
+    .menu-item {
+        // font-size: 1rem;
+        display: flex;
+        li {
+            margin-left: 20px;
+        }
+    }
+
+    // 隱藏img
+    .menu-img {
+        display: none;
+    }
+}
+
+// 開始使用按鈕
+.start {
+    display: inline-block;
+    font-size: 1.25rem;
+    padding: 20px 30px;
+    border-radius: 15px;
+    border: 1px solid $base-color;
+    color: $base-color;
+}
+
+// 草動畫
+@keyframes slide-up {
+    0% {
+        transform: translateY(100%);
+    }
+
+    50% {
+        transform: translateY(0%);
+    }
+
+    60% {
+        transform: translateY(0%);
+    }
+
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+.header {
+    a {
+        font-weight: 700;
+    }
+
+    .title{
+        font-size: 7.5rem;
+        line-height: 9rem;
+        //保留換行，連續空白合併
+        white-space: pre-line;
+        margin: 40px 0;
+    }
+
+    .grass {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 160px;
+
+        &-li {
+            position: relative;
+            overflow: hidden;
+            height: 180px;
+        }
+
+        &-img {
+            animation: slide-up 3s infinite;
+        }
+
+        .delay-02 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-04 {
+            animation-delay: 0.4s;
+        }
+
+        .delay-06 {
+            animation-delay: 0.6s;
+        }
+
+    }
+}
+
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .header-service {
+        width: 32%;
+        font-size: $fz-2;
+    }
+
+    .header-introduce {
+        width: 66%;
+        font-size: $fz-3;
+        line-height: 3rem;
+    }
+
+    .service-card {
+        display: flex;
+        justify-content: space-between;
+
+        .card-body {
+            padding: 5% 3% 2%;
+            width: 32%;
+            border: 3px solid #FFFFFF14;
+            border-radius: 5%;
+
+            img {
+                margin-bottom: 5%;
+            }
+        }
+    }
+}
+
+.partner {
+    width: 100%;
+
+    .partner-h2 {
+        width: 100%;
+        margin-bottom: 80px;
+        font-size: $fz-2;
+    }
+
+    .partner-img{       
+        img {
+            height: 40px;
+            width: 150px; 
+        }
+
+        .enterprise {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        // 漸層
+        .enterprise::after,
+        .enterprise::before {
+            content: "";
+            width: 160px;
+            height: 40px;
+            position: absolute;
+        }
+
+        .enterprise::after {
+            right: 20px;
+            background: linear-gradient(to left, rgb(0, 0, 0, 1) 0%, rgb(0, 0, 0, 0.5) 80%, rgb(0, 0, 0, 0.1) 100%);
+        }
+
+        .enterprise::before {
+            left: 0px;
+            background: linear-gradient(to right, rgb(0, 0, 0, 1)0%, rgb(0, 0, 0, 0.5) 80%, rgb(0, 0, 0, 0.1) 100%);
+        }
+
+        .enterprise-down {
+            margin-left: 24px;
+        }
+    }
+}
+
+
+.comment-samll-page {
+    display: none;
+}
+
+.comment-div {
+    width: 100%;
+}
+
+.comment-card {
+    display: flex;
+    justify-content: space-between;
+    // width: 1296px;
+    margin: 3rem 0 1.5rem;
+
+    .comment-card-body {
+        background: #FFFFFF14;
+        width: 32%;
+        border-radius: 5%;
+        padding: 5% 40px;
+
+        .comment {
+            height: 195px;
+            overflow: hidden;
+        }
+
+        p {
+            width: 0 30%;
+        }
+    }
+
+    .commenter {
+        display: flex;
+        align-items: center;
+
+        img {
+            height: 48px;
+            width: 48px;
+            margin-right: 16px;
+        }
+
+        .commenter-name {
+            margin-bottom: 4px;
+            font-weight: 700;
+        }
+
+        .commenter-company {
+            font-weight: 400;
+            // font-size: 14px;
+            font-size: 0.875rem;
+        }
+    }
+}
+
+
+.body {
+    width: 100%;
+    border-radius: 10rem;
+    background: $base-color;
+    color: black;
+    overflow: hidden;
+    margin-top: 160px;
+
+    .h2-content{
+        font-size: $fz-5;
+        text-align: center;
+    }
+
+    // 搜尋
+    .search {
+        margin-top: 80px;
+        border: none;
+        color: $gray-darker;
+        background: $gray;
+        border-radius: 16px;
+        background-image: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2023web-camp/icons/search.png");
+        background-repeat: no-repeat;
+        background-size: 24px 24px;
+        height: 64px;
+        background-position: 43px 20px;
+        padding-left: 70px;
+        width: 100%;
+    }
+
+    // 篩選
+    .filter-bar {
+        margin-top: 24px;
+        margin-bottom: 40px;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        .filter-btn {
+            padding: 20px 32px 20px 40px;
+            background: $base-color;
+            font-size: $fz-1;
+            font-family: $font-family;
+            display: flex;
+            align-items: center;
+        }
+
+        .btn {
+            border: 2px solid $gray;
+            border-radius: 1rem;
+        }
+
+        .ul-tag {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            li {
+                margin-left: 40px;
+            }
+
+            .tag-btn {
+                background: $gray;
+                padding: 4px 8px;
+                color: black;
+            }
+            // 增加點擊範圍
+            a{
+                display: block;
+                padding: 4px 6px;
+            }
+        }
+
+        a {
+            color: $gray-darker;
+        }
+    }
+
+    // AI工具王卡片
+    .wrap {
+        display: flex;
+        // 換行
+        flex-wrap: wrap;
+        // 解決縮成兩排時分散距離
+        justify-content: space-around;
+
+        .mrl-24 {
+            margin-right: 24px;
+            margin-left: 24px;
+        }
+
+        .card {
+            width: 416px;
+            margin-top: 12px;
+            margin-bottom: 12px;
+            border: 1px solid $gray;
+            border-radius: 16px;
+            // 解決圖片超出圓角
+            overflow: hidden;
+
+            a {
+                color: black;
+            }
+
+            .card-img {
+                overflow: hidden;
+
+                img:hover {
+                    // 設定過渡時間0.5秒
+                    transition: transform 0.5s;
+                    transform: scale(1.2);
+                }
+            }
+
+            .card-header,
+            .card-body,
+            .card-footer {
+                padding: 20px 32px;
+            }
+
+            .card-body,
+            .card-footer {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .card-header {
+                h3 {
+                    font-size: 1.25rem;
+                    margin-bottom: 12px;
+                    font-weight: 900;
+                }
+
+                p {
+                    color: #525252;
+                    font-size: 0.875rem;
+                    height: 42px;
+                    line-height: 150%;
+                }
+            }
+
+
+            .card-body {
+                border-top: 1px solid $gray;
+
+                h4 {
+                    font-weight: 700;
+                }
+
+                // h4,
+                // span {
+                //     // font-size: 1rem;
+                // }
+            }
+
+            .card-footer {
+                border-top: 1px solid $gray;
+                // 垂直置中
+                align-items: center;
+            }
+        }
+    }
+
+    // 頁數
+    .page {
+        display: flex;
+        justify-content: flex-end;
+        margin: 24px 0 162px;
+
+        a {
+            display: block;
+            padding: 0.85rem 1.2rem;
+            color: black;
+        }
+
+        .now-page {
+            background: black;
+            color: $base-color;
+            border-radius: 1rem;
+        }
+    }
+}
+
+.w100per {
+    width: 100%;
+    text-align: center;
+}
+
+.footer {
+    &-header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 160px 0;
+
+        .f-start {
+            display: flex;
+        }
+
+        img {
+            margin-left: 1rem;
+        }
+        h2 {
+            font-size: $fz-2;
+            line-height: 38px;
+            //保留換行，連續空白合併
+            white-space: pre-line;
+        }
+    }
+
+    &-content {
+        padding: 5rem 0;
+        border-top: 2px solid $base-color;
+        border-bottom: 2px solid $base-color;
+
+        .f-content {
+            display: flex;
+            justify-content: space-between;
+
+            a {
+                display: block;
+            }
+            .go-page {
+                a {
+                    font-size: $fz-5;
+                }
+            }
+        }
+    }
+
+    &-footer {
+        display: flex;
+        justify-content: space-between;
+        margin: 2rem 0;
+
+        .footer-left {
+            display: flex;
+
+            .community-link {
+                margin-left: 6.25rem;
+                display: flex;
+
+                li {
+                    margin-right: 20px;
+                }
+            }
+        }
+
+        .back-to {
+            .back-to-top {
+                margin-right: 1rem;
+            }
+        }
+    }
+}

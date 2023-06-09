@@ -1,0 +1,312 @@
+// 1350px
+@media(max-width: 1350px) {
+    // .container {
+    //     // width: 100%;
+    //     // max-width: 1920px;
+    //     margin: 0 auto;
+    // }
+
+    // 內容大小設定
+    .container-content {
+        // width: 100%;
+        // max-width: 1350px;
+        margin: 0 auto;
+    }
+    .body {
+        // // AI工具王卡片
+        .wrap {
+            .mrl-24 {
+                // 取消mrl-24 設定
+                margin-right: 0;
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+////////////////////////////////////////////////////////////////////////////
+
+// 992px
+@media(max-width: 992px) {
+    // body::-webkit-scrollbar {
+    //     display: none;
+    // }
+
+    h1 {
+        font-size: $fz-3;
+        line-height: 3.5rem;
+    }
+
+    // h2 {
+    //     font-size: 2rem;
+    // }
+
+    // h3 {
+    //     font-size: $fz-2;
+    //     line-height: 38.4px;
+    //     //保留換行，連續空白合併
+    //     white-space: pre-line;
+    // }
+
+    // h4 {
+    //     font-size: 1.25rem;
+    // }
+
+    // html {
+    //     // max-width: 375px;
+    //     // width: 375px;
+    // }
+
+    .container {
+        width: 100%;
+        // max-width: 375px;
+        // width: 375px;
+    }
+
+    // 內容大小設定
+    .container-content {
+        width: 100%;
+        max-width: 351px;
+    }
+
+    .menu {
+        .menu-item {
+            display: none;
+        }
+
+        .menu-img {
+            display: block;
+        }
+    }
+
+    .body{
+        .h2-content {
+            font-size: $fz-2;
+            margin: 5rem 2.5rem 0;
+            text-align: center;
+        }
+    }
+
+
+    .header {
+        .grass {
+            margin-bottom: 110px;
+        }
+        .title{
+            font-size: $fz-3;
+            line-height: 3.5rem;
+            margin: 40px 100px 40px 0;
+        }
+    }
+
+    .header-content {
+        .header-service {
+            width: 100%;
+            margin-bottom: 24px;
+            font-size: 1.25rem;
+        }
+
+        .header-introduce {
+            width: 100%;
+            font-size: $fz-2;
+            line-height: 2.5rem;
+        }
+
+        .s-mb-120 {
+            margin-bottom: 120px;
+        }
+
+        .service-card {
+            flex-wrap: wrap;
+
+            .card-body {
+                width: 100%;
+                margin-top: 10px;
+            }
+        }
+    }
+
+    .partner {
+        .partner-h2 {
+            margin-bottom: 24px;
+        }
+
+        .partner-img{
+            // X軸滑動效果
+            overflow-x: auto;
+            &::-webkit-scrollbar{
+                // 隱藏滾輪
+                // scrollbar-width: none;
+                display: none;
+            }
+            li{
+                // 不改變圖片大小
+                flex-shrink: 0;
+            }
+            .enterprise::after,
+            .enterprise::before {
+                content: "";
+                width: 50px;
+                height: 40px;
+                position: absolute;
+            }
+            .enterprise::after {
+                right: 8px;
+            }
+        }
+    }
+
+    .comment-samll-page {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 122px;
+
+        .circle {
+            width: 0.5rem;
+            height: 0.5rem;
+            border: 1px solid rgb(64, 64, 64);
+            background-color: rgb(64, 64, 64);
+            border-radius: 50%;
+            margin-left: 0.5rem;
+        }
+
+        .page-on {
+            width: 0.75rem;
+            height: 0.75rem;
+            border: 1px solid $base-color;
+            background: $base-color;
+        }
+    }
+
+    .comment-card {
+        flex-wrap: wrap;
+
+        .card-hide {
+            display: none;
+        }
+
+        .comment-card-body {
+            width: 100%;
+        }
+    }
+
+
+    .body {
+        margin-top: 0;
+        border-radius: 1.25rem;
+
+        // // 搜尋
+        .search {
+            margin-top: 2rem;
+        }
+
+        // 篩選
+        .filter-bar {
+            flex-wrap: wrap;
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+            // 超出隱藏
+            overflow: hidden;
+            .filter-btn {
+                order: 1;
+            }
+
+            .ul-tag {
+                height: 2.5rem;
+                // 不縮放
+                flex-shrink: 0;
+                order: 3;
+                // // 超出隱藏
+                // overflow: hidden;
+                margin-top: 1rem;
+
+                li {
+                    margin: 0 40px 0 0;
+                }
+
+                .tag-btn {
+                    padding: 4px 8px;
+                }
+            }
+
+            .sort {
+                order: 2;
+            }
+        }
+
+        
+
+        // // // AI工具王卡片
+        // .wrap {
+        //     .mrl-24 {
+        //         // 取消mrl-24 設定
+        //         margin-right: 0;
+        //         margin-left: 0;
+        //     }
+        // }
+
+        // 頁數
+        .page {
+            margin: 1.5rem 0 5rem;
+
+        }
+    }
+
+    .w100per {
+        margin: 0 3.8rem;
+    }
+
+
+    .footer {
+        .footer-header{
+            h2{
+                font-size: $fz-2;
+            }
+        }
+        .footer-content {
+            .f-content {
+                flex-wrap: wrap;
+
+                .f-logo {
+                    order: 1;
+                    width: 100%;
+                    margin-bottom: 2.5rem;
+                }
+
+                .go-page {
+                    order: 2;
+                    a {
+                        font-size: $fz-2;
+                    }
+                }
+            }
+        }
+
+        .footer-footer {
+            .footer-left {
+                flex-wrap: wrap;
+                justify-content: start;
+
+                .community-link {
+                    margin-left: 0;
+                    margin-top: 2.25rem;
+
+                    .m-no {
+                        margin: 0;
+                    }
+                }
+            }
+
+            .back-to {
+                width: 45%;
+
+                .back-to-top {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
+
